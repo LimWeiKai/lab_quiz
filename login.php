@@ -4,12 +4,13 @@
  
 <?php
 $pw = $_POST['password'];
+$response = "";
 
 function checkPassword($password){
-
+	
 	$array = explode("\n", file_get_contents('10-million-password-list-top-1000.txt') );
 	
-	if ((in_array $password, array)) {
+	if (in_array ($password, $array)) {
 		global $response;
 		$response = true;
 		return true;
