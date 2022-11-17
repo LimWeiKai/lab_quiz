@@ -3,14 +3,16 @@ use PHPUnit\Framework\TestCase;
 require 'login.php';
 
 class loginTest extends TestCase {
+	
+$array = explode("\n", file_get_contents('10-million-password-list-top-1000.txt') );
 
-	public function testIfLoginSuccess(): void {
+	public function testIfSuccess(): void {
 		
-		$this->assertTrue(checkAccount("ben", "ben23"));
+		$this->assertTrue(in_array $password, array);
 		
 	}
-	public function testIfLoginUnsuccessful(): void {
-		$this->assertFalse(checkAccount("admin", "admin"));
+	public function testIfUnsuccessful(): void {
+		$this->assertFalse(''));
 	}
 }
 ?>

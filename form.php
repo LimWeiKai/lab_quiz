@@ -73,8 +73,6 @@ span.psw {
 <form action="/login.php" method="post">
 
   <div class="container">
-    <label for="userid"><b>Username</b></label>
-    <input type="text" placeholder="Enter Username" name="userid" required>
 
     <label for="password"><b>Password</b></label>
     <input type="password" placeholder="Enter Password" name="password" required>

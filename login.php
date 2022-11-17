@@ -3,11 +3,13 @@
 <body>
  
 <?php
-$uid = $_POST['userid'];
 $pw = $_POST['password'];
- 
-function checkAccount($username, $password){
-	if ($username == "ben" && $password == "ben23") {
+
+function checkPassword($password){
+
+	$array = explode("\n", file_get_contents('10-million-password-list-top-1000.txt') );
+	
+	if ((in_array $password, array)) {
 		global $response;
 		$response = true;
 		return true;
@@ -19,14 +21,14 @@ function checkAccount($username, $password){
 	}
 }
 
-checkAccount($uid, $pw);
+checkPassword($pw);
 
 	if($response == true){
 		session_start();
-		echo "welcome, ", $uid;
+		echo "welcome, ", $pw;
 	}
 	else{
-		echo "loser";
+		echo "No";
 	
 	}
 
@@ -34,7 +36,7 @@ checkAccount($uid, $pw);
 ?>
 
 <div>
-<button><a href="logout.php">Logout</a></button>
+<button><a href="form.php">Logout</a></button>
 </div>
 
 </body>
