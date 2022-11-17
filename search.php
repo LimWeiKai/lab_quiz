@@ -3,14 +3,12 @@
 <body>
  
 <?php
-$pw = $_POST['password'];
+$search = $_POST['search'];
 $response = "";
 
-function checkPassword($password){
+function checkSearch($search){
 	
-	$array = explode("\n", file_get_contents('10-million-password-list-top-1000.txt') );
-	
-	if (in_array ($password, $array)) {
+	if (in_array ($search)) {
 		global $response;
 		$response = true;
 		return true;
@@ -37,7 +35,7 @@ checkPassword($pw);
 ?>
 
 <div>
-<button><a href="form.php">Logout</a></button>
+<button><a href="form.php">Return Home</a></button>
 </div>
 
 </body>
