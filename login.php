@@ -23,7 +23,7 @@ function checkPassword($password){
 
 checkPassword($pw);
 
-	if($response == true){
+	if($response == false){
 		session_start();
 		echo "welcome, ", $pw;
 	}
